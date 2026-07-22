@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "BA Bridge"
+version = "1.0.0"
+id = "artifacts/ba-bridge"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23824
+
+[services.development]
+run = "pnpm --filter @workspace/ba-bridge run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ba-bridge", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ba-bridge/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23824"
+BASE_PATH = "/"
