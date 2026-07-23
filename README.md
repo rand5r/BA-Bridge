@@ -1,6 +1,7 @@
 # BA Bridge
 
 https://ba-bridge.replit.app
+---------------
 https://github.com/rand5r/BA-Bridge/tree/main
 
 BA Bridge is an AI-powered web application that transforms Business Requirements Documents (BRDs) into structured Technical Requirements & Architecture Specifications.
